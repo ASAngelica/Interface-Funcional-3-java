@@ -23,7 +23,7 @@ public class Program {
 		list.add(new Product("HD Case", 80.90));
 		                         
 		                                       //Reference methods
-		List<String> names = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
+		List<String> names = list.stream().map(Product::nonStaticUpperCaseName).collect(Collectors.toList());
 		
 		              //Reference methods
 		names.forEach(System.out::println);
