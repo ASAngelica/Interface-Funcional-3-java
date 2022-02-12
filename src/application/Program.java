@@ -21,9 +21,11 @@ public class Program {
 		list.add(new Product("Mouse", 50.00));
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
+		                         
+		                                       //Reference methods
+		List<String> names = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
 		
-		List<String> names = list.stream().map(new UpperCaseName()).collect(Collectors.toList());
-		
+		              //Reference methods
 		names.forEach(System.out::println);
 		
 	}
